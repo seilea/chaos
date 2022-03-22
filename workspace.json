@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "gaea": "packages/gaea",
+    "uranus": "packages/uranus"
+  }
 }
