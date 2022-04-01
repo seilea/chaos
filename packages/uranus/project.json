@@ -6,7 +6,6 @@
     "build": {
       "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
         "outputPath": "dist/packages/uranus",
@@ -21,7 +20,7 @@
         ],
         "styles": [],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "packages/uranus/webpack.config.js"
       },
       "configurations": {
         "production": {
