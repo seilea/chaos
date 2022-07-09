@@ -1,5 +1,5 @@
 {
-  "root": "packages/uranus",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/uranus/src",
   "projectType": "application",
   "targets": {
@@ -36,8 +36,15 @@
           "namedChunks": false,
           "extractLicenses": true,
           "vendorChunk": false
+        },
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
         }
-      }
+      },
+      "defaultConfiguration": "production"
     },
     "serve": {
       "executor": "@nrwl/web:dev-server",
@@ -49,8 +56,12 @@
         "production": {
           "buildTarget": "uranus:build:production",
           "hmr": false
+        },
+        "development": {
+          "buildTarget": "uranus:build:development"
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -63,7 +74,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/uranus"],
       "options": {
-        "jestConfig": "packages/uranus/jest.config.js",
+        "jestConfig": "packages/uranus/jest.config.ts",
         "passWithNoTests": true
       }
     }

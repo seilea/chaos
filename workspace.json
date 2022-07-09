@@ -3,5 +3,6 @@
   "projects": {
     "gaea": "packages/gaea",
     "uranus": "packages/uranus"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
